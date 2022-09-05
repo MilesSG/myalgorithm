@@ -10,12 +10,11 @@ import java.util.HashSet;
 public class Test4 {
     public static void main(String[] args) {
         String s = "abaccb";
-        System.out.println(getFirst('a', s));
-        System.out.println(getLast('a', s));
-        System.out.println(getWidth('a', s));
+        int[] distance = new int[]{1, 3, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        System.out.println(checkDistances(s, distance));
     }
 
-    public boolean checkDistances(String s, int[] distance) {
+    public static boolean checkDistances(String s, int[] distance) {
         HashMap<Character, Integer> map = new HashMap<>();
         char[] chars = s.toCharArray();
         HashSet<Character> set = new HashSet<>();
@@ -26,38 +25,13 @@ public class Test4 {
             map.put(c, getWidth(c, s));
         }
 
-        HashMap<Integer, Character> tmpMap = new HashMap<>();
-        tmpMap.put(0, 'a');
-        tmpMap.put(1, 'b');
-        tmpMap.put(2, 'c');
-        tmpMap.put(3, 'd');
-        tmpMap.put(4, 'e');
-        tmpMap.put(5, 'f');
-        tmpMap.put(6, 'g');
-        tmpMap.put(7, 'h');
-        tmpMap.put(8, 'i');
-        tmpMap.put(9, 'j');
-        tmpMap.put(10, 'k');
-        tmpMap.put(11, 'l');
-        tmpMap.put(12, 'm');
-        tmpMap.put(13, 'n');
-        tmpMap.put(14, 'o');
-        tmpMap.put(15, 'p');
-        tmpMap.put(16, 'q');
-        tmpMap.put(17, 'r');
-        tmpMap.put(18, 's');
-        tmpMap.put(19, 't');
-        tmpMap.put(20, 'u');
-        tmpMap.put(21, 'v');
-        tmpMap.put(22, 'w');
-        tmpMap.put(23, 'x');
-        tmpMap.put(24, 'y');
-        tmpMap.put(25, 'z');
         // 遍历distance进行匹配
-        for (int i = 0; i < set.size(); i++) {
-            if (distance[i] != tmpMap.get(i)) {
+        int i = 0;
+        for (Character c : set) {
+            if (map.get(c) != distance[i]) {
                 return false;
             }
+            i++;
         }
         return true;
     }

@@ -12,5 +12,6 @@ public class Test3 {
     public boolean rotateString(String s, String goal) {
         String tmp = s + goal;
         return tmp.contains(s);
+
     }
 }
