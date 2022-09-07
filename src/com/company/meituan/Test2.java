@@ -1,12 +1,10 @@
 package com.company.meituan;
 
-import java.util.Scanner;
-
 /**
  * 小美的仓库整理
  * https://leetcode.cn/leetbook/read/meituan/oh4ykh/
  */
-public class Text2 {
+public class Test2 {
     public static void main(String[] args) {
 
     }

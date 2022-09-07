@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 // 淘汰分数 https://www.nowcoder.com/test/question/9c4a4e879b4f49939dfaebea8948f976?pid=28665343&tid=60476219
-public class Text4 {
+public class Test4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int totalNum = sc.nextInt();
